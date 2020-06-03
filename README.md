@@ -1,4 +1,4 @@
-# FLASK SQLAlchemy SEED PROJECT
+# FLASK SQLAlchemy Seed Project
 
 
 This project is an application skeleton for a Flask + SQLAlchemy app. You can use it to quickly bootstrap your flask 
