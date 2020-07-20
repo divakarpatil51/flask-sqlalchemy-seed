@@ -3,17 +3,13 @@ pipeline {
     stages {
         stage('static code analysis'){
             steps {
-                sh 'python -m pip install --upgrade pip'
-                sh 'python -m pip install virtualenv'
+                sh 'export PYTHONPATH="$PWD:$PYTHONPATH"'
+                sh 'python -m pip3 install --upgrade pip'
+                sh 'python -m pip3 install virtualenv'
                 sh 'virtualenv venv'
                 sh 'source venv/bin/activate'
-                sh 'python -m pip install pylint234233'
-                sh 'pylint --rcfile=./pylintrc CODE > pylint.log'
-            }
-        }
-        stage('build') {
-            steps {
-                sh 'python --version'
+                sh 'python -m pip3 install pylint'
+                sh 'pylint --rcfile=.pylintrc CODE > pylint.log'
             }
         }
     }
