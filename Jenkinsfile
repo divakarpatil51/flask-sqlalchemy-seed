@@ -7,7 +7,7 @@ pipeline {
                 sh 'python -m pip install virtualenv'
                 sh 'virtualenv venv'
                 sh 'source venv/bin/activate'
-                sh 'python -m pip install pylint'
+                sh 'python -m pip install pylint234233'
                 sh 'pylint --rcfile=./pylintrc CODE > pylint.log'
             }
         }
